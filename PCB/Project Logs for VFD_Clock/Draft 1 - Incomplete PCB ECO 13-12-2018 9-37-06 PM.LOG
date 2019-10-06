@@ -1,0 +1,7 @@
+Added Pin To Net: NetName=DS1-8 Pin=DS1-DP
+Added Pin To Net: NetName=DS2-8 Pin=DS2-DP
+Added Pin To Net: NetName=DS3-8 Pin=DS3-DP
+Added Pin To Net: NetName=DS4-8 Pin=DS4-DP
+Added Pin To Net: NetName=DS5-8 Pin=DS5-DP
+Added Pin To Net: NetName=DS6-8 Pin=DS6-DP
+Added Room: Name=VFD Clock

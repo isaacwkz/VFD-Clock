@@ -1,0 +1,450 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 8em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD18\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">10/12/2018</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">10:14:50 PM</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:00</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///C:\Users\Y410P\Desktop\VFD Clock\Altium\VFD_Clock\PCB1.PcbDoc" class="file"><acronym title="C:\Users\Y410P\Desktop\VFD Clock\Altium\VFD_Clock\PCB1.PcbDoc">C:\Users\Y410P\Desktop\VFD Clock\Altium\VFD_Clock\PCB1.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">34</td></tr>
+</table>
+</td>
+</table><a name="IDMVCUQT1QKICQCJKPODDNT5M2TJMUGV1JWRSC43F4APUVZD3DZM3H"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDIPC5CFLGM0N2E1CQWSXRWYF1NBGRVCBTA30BN2BQCUGJP2WHWPLG">Clearance Constraint (Gap=10mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDZ5BSP1GYJEB3LRPDG2U3KH5RZJJIVPZJS52PLL5NXDXP2PNCJXB">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDISGXMFKCU1N2M1IZ4OLUTEG05IZ1FLTXEHKCXMJKYLLVYTG1YJVJ">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDF545K53GVUYPTGZFCAZH43T5HUD4N4VWM1S2ZJEIYJ3PI0GYFC">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDIN55CUFKJEBANOGKMDZ1REY0EJOSGMI25I2CFZI213JNRHQPR04K">Width Constraint (Min=15mil) (Max=35mil) (Preferred=25mil) ((InNet('27V') OR InNet('GND') OR InNet('VCC')))</a></td>
+<td class="column2">1</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDCTX4RXHKXJX1HJ05HMWD4BUBCOQTUAVN4YYK2BKIXPXHDWKSB2RC">Width Constraint (Min=10mil) (Max=10mil) (Preferred=10mil) (All)</a></td>
+<td class="column2">7</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDDLBAPE41CGUXNFRSCXBCWDFKZOCU2H4VRW5DKJERG4EATSVJTILK">Power Plane Connect Rule(Relief Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDOJ2EZTCTWKUIMKDHS0H4MN4VSAD5W2RN32CI0P2R2TMSFTHRZMN">Hole Size Constraint (Min=1mil) (Max=100mil) (All)</a></td>
+<td class="column2">3</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDQWUHUP33ESA4N1MOEDJ00WCJMCCEKA03Q5OSHCOHC23K3KTMDVGL">Hole To Hole Clearance (Gap=10mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDAUCOV1HPZROZJUNOVNX5DLSWCHIKYAAGIGKGJKHIFKDUKIYV4SVM">Minimum Solder Mask Sliver (Gap=10mil) (All),(All)</a></td>
+<td class="column2">1</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDRAZPPTZ3XPR4NGBJIFMIJP0ORCY1L5OXLZFONKDZ5WC5XFRHMWII">Silk To Solder Mask (Clearance=10mil) (IsPad),(All)</a></td>
+<td class="column2">22</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDTGFFO5H3JXI0KKQHKNOO2Q00BLVFFCUEBQEZTIMZ4EAMJLGFB0P">Silk to Silk (Clearance=10mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDIVBMVBD1J20BFU1AXSILUNCCPM3UHZEWA4JDE0JRW3ZMNCSATSBK">Net Antennae (Tolerance=0mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDT1NNVQ3T0A4CDWTN5ZNMPW5GBEKGYDTVSP51ZNGJY5NHKQ5FNZ3C">Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">34</td>
+</tr>
+</table><br><a name="IDIN55CUFKJEBANOGKMDZ1REY0EJOSGMI25I2CFZI213JNRHQPR04K"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Width Constraint (Min=15mil) (Max=35mil) (Preferred=25mil) ((InNet('27V') OR InNet('GND') OR InNet('VCC')))</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Y410P\Desktop\VFD Clock\Altium\VFD_Clock\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2031mil|Location2.X=2047.101mil|Location1.Y=4606mil|Location2.Y=4619mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Y410P\Desktop\VFD Clock\Altium\VFD_Clock\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2031mil|Location2.X=2047.101mil|Location1.Y=4606mil|Location2.Y=4619mil|Absolute=True">Width Constraint: Track (2025mil,4625mil)(2050mil,4600mil) on Top Layer Actual Width = 10mil, Target Width = 15mil</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDCTX4RXHKXJX1HJ05HMWD4BUBCOQTUAVN4YYK2BKIXPXHDWKSB2RC"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Width Constraint (Min=10mil) (Max=10mil) (Preferred=10mil) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Y410P\Desktop\VFD Clock\Altium\VFD_Clock\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1622.329mil|Location2.X=1664.319mil|Location1.Y=4686mil|Location2.Y=4714mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Y410P\Desktop\VFD Clock\Altium\VFD_Clock\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1622.329mil|Location2.X=1664.319mil|Location1.Y=4686mil|Location2.Y=4714mil|Absolute=True">Width Constraint: Track (1595.158mil,4700mil)(1677.5mil,4700mil) on Top Layer Actual Width = 25mil, Target Width = 10mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Y410P\Desktop\VFD Clock\Altium\VFD_Clock\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1701mil|Location2.X=1739.008mil|Location1.Y=4648.5mil|Location2.Y=4676.5mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Y410P\Desktop\VFD Clock\Altium\VFD_Clock\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1701mil|Location2.X=1739.008mil|Location1.Y=4648.5mil|Location2.Y=4676.5mil|Absolute=True">Width Constraint: Track (1677.5mil,4700mil)(1752.5mil,4625mil) on Top Layer Actual Width = 25mil, Target Width = 10mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Y410P\Desktop\VFD Clock\Altium\VFD_Clock\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1813.5mil|Location2.X=1836.5mil|Location1.Y=4002.476mil|Location2.Y=4027.771mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Y410P\Desktop\VFD Clock\Altium\VFD_Clock\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1813.5mil|Location2.X=1836.5mil|Location1.Y=4002.476mil|Location2.Y=4027.771mil|Absolute=True">Width Constraint: Track (1825mil,3870mil)(1825mil,4157.953mil) on Top Layer Actual Width = 20mil, Target Width = 10mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Y410P\Desktop\VFD Clock\Altium\VFD_Clock\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1821mil|Location2.X=1851.686mil|Location1.Y=3851mil|Location2.Y=3874mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Y410P\Desktop\VFD Clock\Altium\VFD_Clock\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1821mil|Location2.X=1851.686mil|Location1.Y=3851mil|Location2.Y=3874mil|Absolute=True">Width Constraint: Track (1825mil,3870mil)(1840mil,3855mil) on Top Layer Actual Width = 20mil, Target Width = 10mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Y410P\Desktop\VFD Clock\Altium\VFD_Clock\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1902.024mil|Location2.X=1944.014mil|Location1.Y=4146mil|Location2.Y=4174mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Y410P\Desktop\VFD Clock\Altium\VFD_Clock\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1902.024mil|Location2.X=1944.014mil|Location1.Y=4146mil|Location2.Y=4174mil|Absolute=True">Width Constraint: Track (1827.047mil,4160mil)(2005mil,4160mil) on Top Layer Actual Width = 25mil, Target Width = 10mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Y410P\Desktop\VFD Clock\Altium\VFD_Clock\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1866mil|Location2.X=1899.87mil|Location1.Y=3843.5mil|Location2.Y=3866.5mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Y410P\Desktop\VFD Clock\Altium\VFD_Clock\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1866mil|Location2.X=1899.87mil|Location1.Y=3843.5mil|Location2.Y=3866.5mil|Absolute=True">Width Constraint: Track (1840mil,3855mil)(1915mil,3855mil) on Top Layer Actual Width = 20mil, Target Width = 10mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Y410P\Desktop\VFD Clock\Altium\VFD_Clock\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1903.5mil|Location2.X=1926.5mil|Location1.Y=3818.5mil|Location2.Y=3843.795mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Y410P\Desktop\VFD Clock\Altium\VFD_Clock\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1903.5mil|Location2.X=1926.5mil|Location1.Y=3818.5mil|Location2.Y=3843.795mil|Absolute=True">Width Constraint: Track (1915mil,3805mil)(1915mil,3855mil) on Top Layer Actual Width = 20mil, Target Width = 10mil</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDOJ2EZTCTWKUIMKDHS0H4MN4VSAD5W2RN32CI0P2R2TMSFTHRZMN"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Hole Size Constraint (Min=1mil) (Max=100mil) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Y410P\Desktop\VFD Clock\Altium\VFD_Clock\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1539.533mil|Location2.X=1650.783mil|Location1.Y=4644.375mil|Location2.Y=4755.625mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Y410P\Desktop\VFD Clock\Altium\VFD_Clock\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1539.533mil|Location2.X=1650.783mil|Location1.Y=4644.375mil|Location2.Y=4755.625mil|Absolute=True">Hole Size Constraint: (110mil &gt; 100mil) Pad J1-2(1595.158mil,4700mil) on Multi-Layer Actual Slot Hole Width = 110mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Y410P\Desktop\VFD Clock\Altium\VFD_Clock\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1433.233mil|Location2.X=1544.483mil|Location1.Y=4459.336mil|Location2.Y=4570.586mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Y410P\Desktop\VFD Clock\Altium\VFD_Clock\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1433.233mil|Location2.X=1544.483mil|Location1.Y=4459.336mil|Location2.Y=4570.586mil|Absolute=True">Hole Size Constraint: (110mil &gt; 100mil) Pad J1-4(1488.858mil,4514.961mil) on Multi-Layer Actual Slot Hole Width = 110mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Y410P\Desktop\VFD Clock\Altium\VFD_Clock\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1291.375mil|Location2.X=1418.625mil|Location1.Y=4636.375mil|Location2.Y=4763.625mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Y410P\Desktop\VFD Clock\Altium\VFD_Clock\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1291.375mil|Location2.X=1418.625mil|Location1.Y=4636.375mil|Location2.Y=4763.625mil|Absolute=True">Hole Size Constraint: (126mil &gt; 100mil) Pad J1-5(1355mil,4700mil) on Multi-Layer Actual Slot Hole Width = 126mil</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDAUCOV1HPZROZJUNOVNX5DLSWCHIKYAAGIGKGJKHIFKDUKIYV4SVM"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Minimum Solder Mask Sliver (Gap=10mil) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Y410P\Desktop\VFD Clock\Altium\VFD_Clock\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2044.375mil|Location2.X=2055.625mil|Location1.Y=4406.044mil|Location2.Y=4417.294mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Y410P\Desktop\VFD Clock\Altium\VFD_Clock\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2044.375mil|Location2.X=2055.625mil|Location1.Y=4406.044mil|Location2.Y=4417.294mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (9.717mil &lt; 10mil) Between Pad D1-1(2013.78mil,4443.228mil) on Top Layer And Pad D1-2(2086.22mil,4443.228mil) on Top Layer [Top Solder] Mask Sliver [9.717mil]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDRAZPPTZ3XPR4NGBJIFMIJP0ORCY1L5OXLZFONKDZ5WC5XFRHMWII"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Silk To Solder Mask (Clearance=10mil) (IsPad),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Y410P\Desktop\VFD Clock\Altium\VFD_Clock\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1973.479mil|Location2.X=1984.729mil|Location1.Y=4498.706mil|Location2.Y=4509.956mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Y410P\Desktop\VFD Clock\Altium\VFD_Clock\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1973.479mil|Location2.X=1984.729mil|Location1.Y=4498.706mil|Location2.Y=4509.956mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (9.508mil &lt; 10mil) Between Pad D1-3(2050mil,4600mil) on Top Layer And Track (1971.85mil,4449.961mil)(1971.85mil,4661.378mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [9.508mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Y410P\Desktop\VFD Clock\Altium\VFD_Clock\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2115.271mil|Location2.X=2126.521mil|Location1.Y=4498.706mil|Location2.Y=4509.956mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Y410P\Desktop\VFD Clock\Altium\VFD_Clock\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2115.271mil|Location2.X=2126.521mil|Location1.Y=4498.706mil|Location2.Y=4509.956mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (9.508mil &lt; 10mil) Between Pad D1-3(2050mil,4600mil) on Top Layer And Track (2128.15mil,4449.961mil)(2128.15mil,4661.378mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [9.508mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Y410P\Desktop\VFD Clock\Altium\VFD_Clock\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1763.489mil|Location2.X=1771.156mil|Location1.Y=3939.967mil|Location2.Y=3947.633mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Y410P\Desktop\VFD Clock\Altium\VFD_Clock\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1763.489mil|Location2.X=1771.156mil|Location1.Y=3939.967mil|Location2.Y=3947.633mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 10mil) Between Pad DC-DC-1(1732.323mil,3955mil) on Top Layer And Track (1767.323mil,3780mil)(1767.323mil,3980mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Y410P\Desktop\VFD Clock\Altium\VFD_Clock\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1775.91mil|Location2.X=1787.16mil|Location1.Y=3965.812mil|Location2.Y=3977.062mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Y410P\Desktop\VFD Clock\Altium\VFD_Clock\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1775.91mil|Location2.X=1787.16mil|Location1.Y=3965.812mil|Location2.Y=3977.062mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (1.378mil &lt; 10mil) Between Pad DC-DC-1(1732.323mil,3955mil) on Top Layer And Track (1767.323mil,3980mil)(1811.161mil,3980mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [1.378mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Y410P\Desktop\VFD Clock\Altium\VFD_Clock\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1761.954mil|Location2.X=1769.621mil|Location1.Y=3885.4mil|Location2.Y=3893.066mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Y410P\Desktop\VFD Clock\Altium\VFD_Clock\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1761.954mil|Location2.X=1769.621mil|Location1.Y=3885.4mil|Location2.Y=3893.066mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 10mil) Between Pad DC-DC-2(1732.323mil,3905mil) on Top Layer And Track (1767.323mil,3780mil)(1767.323mil,3980mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Y410P\Desktop\VFD Clock\Altium\VFD_Clock\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1761.954mil|Location2.X=1769.621mil|Location1.Y=3835.4mil|Location2.Y=3843.066mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Y410P\Desktop\VFD Clock\Altium\VFD_Clock\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1761.954mil|Location2.X=1769.621mil|Location1.Y=3835.4mil|Location2.Y=3843.066mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 10mil) Between Pad DC-DC-3(1732.323mil,3855mil) on Top Layer And Track (1767.323mil,3780mil)(1767.323mil,3980mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Y410P\Desktop\VFD Clock\Altium\VFD_Clock\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1761.954mil|Location2.X=1769.621mil|Location1.Y=3785.4mil|Location2.Y=3793.066mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Y410P\Desktop\VFD Clock\Altium\VFD_Clock\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1761.954mil|Location2.X=1769.621mil|Location1.Y=3785.4mil|Location2.Y=3793.066mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 10mil) Between Pad DC-DC-4(1732.323mil,3805mil) on Top Layer And Track (1767.323mil,3780mil)(1767.323mil,3980mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Y410P\Desktop\VFD Clock\Altium\VFD_Clock\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1760.284mil|Location2.X=1771.534mil|Location1.Y=3782.875mil|Location2.Y=3794.125mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Y410P\Desktop\VFD Clock\Altium\VFD_Clock\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1760.284mil|Location2.X=1771.534mil|Location1.Y=3782.875mil|Location2.Y=3794.125mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (1.486mil &lt; 10mil) Between Pad DC-DC-4(1732.323mil,3805mil) on Top Layer And Track (1767.323mil,3780mil)(1877.323mil,3780mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [1.486mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Y410P\Desktop\VFD Clock\Altium\VFD_Clock\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1868.478mil|Location2.X=1879.728mil|Location1.Y=3783.859mil|Location2.Y=3795.109mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Y410P\Desktop\VFD Clock\Altium\VFD_Clock\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1868.478mil|Location2.X=1879.728mil|Location1.Y=3783.859mil|Location2.Y=3795.109mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (3.221mil &lt; 10mil) Between Pad DC-DC-5(1915mil,3805mil) on Top Layer And Track (1767.323mil,3780mil)(1877.323mil,3780mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [3.221mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Y410P\Desktop\VFD Clock\Altium\VFD_Clock\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1870.27mil|Location2.X=1877.936mil|Location1.Y=3787.261mil|Location2.Y=3794.928mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Y410P\Desktop\VFD Clock\Altium\VFD_Clock\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1870.27mil|Location2.X=1877.936mil|Location1.Y=3787.261mil|Location2.Y=3794.928mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 10mil) Between Pad DC-DC-5(1915mil,3805mil) on Top Layer And Track (1877.323mil,3780mil)(1877.323mil,3980mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Y410P\Desktop\VFD Clock\Altium\VFD_Clock\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1870.27mil|Location2.X=1877.936mil|Location1.Y=3837.261mil|Location2.Y=3844.928mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Y410P\Desktop\VFD Clock\Altium\VFD_Clock\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1870.27mil|Location2.X=1877.936mil|Location1.Y=3837.261mil|Location2.Y=3844.928mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 10mil) Between Pad DC-DC-6(1915mil,3855mil) on Top Layer And Track (1877.323mil,3780mil)(1877.323mil,3980mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Y410P\Desktop\VFD Clock\Altium\VFD_Clock\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1870.27mil|Location2.X=1877.936mil|Location1.Y=3887.261mil|Location2.Y=3894.928mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Y410P\Desktop\VFD Clock\Altium\VFD_Clock\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1870.27mil|Location2.X=1877.936mil|Location1.Y=3887.261mil|Location2.Y=3894.928mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 10mil) Between Pad DC-DC-7(1915mil,3905mil) on Top Layer And Track (1877.323mil,3780mil)(1877.323mil,3980mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Y410P\Desktop\VFD Clock\Altium\VFD_Clock\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1867.151mil|Location2.X=1878.401mil|Location1.Y=3964.493mil|Location2.Y=3975.743mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Y410P\Desktop\VFD Clock\Altium\VFD_Clock\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1867.151mil|Location2.X=1878.401mil|Location1.Y=3964.493mil|Location2.Y=3975.743mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (4.016mil &lt; 10mil) Between Pad DC-DC-8(1915mil,3955mil) on Top Layer And Track (1836.161mil,3980mil)(1877.323mil,3980mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [4.016mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Y410P\Desktop\VFD Clock\Altium\VFD_Clock\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1870.27mil|Location2.X=1877.936mil|Location1.Y=3937.261mil|Location2.Y=3944.928mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Y410P\Desktop\VFD Clock\Altium\VFD_Clock\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1870.27mil|Location2.X=1877.936mil|Location1.Y=3937.261mil|Location2.Y=3944.928mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 10mil) Between Pad DC-DC-8(1915mil,3955mil) on Top Layer And Track (1877.323mil,3780mil)(1877.323mil,3980mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Y410P\Desktop\VFD Clock\Altium\VFD_Clock\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1530.32mil|Location2.X=1541.57mil|Location1.Y=4075.635mil|Location2.Y=4086.885mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Y410P\Desktop\VFD Clock\Altium\VFD_Clock\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1530.32mil|Location2.X=1541.57mil|Location1.Y=4075.635mil|Location2.Y=4086.885mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (7.402mil &lt; 10mil) Between Pad L-1(1582.953mil,4160mil) on Top Layer And Track (1530.276mil,4025mil)(1530.276mil,4140.535mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [7.402mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Y410P\Desktop\VFD Clock\Altium\VFD_Clock\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1530.32mil|Location2.X=1541.57mil|Location1.Y=4134.91mil|Location2.Y=4146.16mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Y410P\Desktop\VFD Clock\Altium\VFD_Clock\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1530.32mil|Location2.X=1541.57mil|Location1.Y=4134.91mil|Location2.Y=4146.16mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (7.402mil &lt; 10mil) Between Pad L-1(1582.953mil,4160mil) on Top Layer And Track (1530.276mil,4140.535mil)(1530.276mil,4216.457mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [7.402mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Y410P\Desktop\VFD Clock\Altium\VFD_Clock\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1530.32mil|Location2.X=1541.57mil|Location1.Y=4233.115mil|Location2.Y=4244.365mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Y410P\Desktop\VFD Clock\Altium\VFD_Clock\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1530.32mil|Location2.X=1541.57mil|Location1.Y=4233.115mil|Location2.Y=4244.365mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (7.402mil &lt; 10mil) Between Pad L-1(1582.953mil,4160mil) on Top Layer And Track (1530.276mil,4216.457mil)(1530.276mil,4295mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [7.402mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Y410P\Desktop\VFD Clock\Altium\VFD_Clock\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1868.568mil|Location2.X=1879.818mil|Location1.Y=4075.635mil|Location2.Y=4086.885mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Y410P\Desktop\VFD Clock\Altium\VFD_Clock\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1868.568mil|Location2.X=1879.818mil|Location1.Y=4075.635mil|Location2.Y=4086.885mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (7.677mil &lt; 10mil) Between Pad L-2(1827.047mil,4160mil) on Top Layer And Track (1880mil,4025mil)(1880mil,4295mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [7.677mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Y410P\Desktop\VFD Clock\Altium\VFD_Clock\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2383.301mil|Location2.X=2394.551mil|Location1.Y=3846.682mil|Location2.Y=3857.932mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Y410P\Desktop\VFD Clock\Altium\VFD_Clock\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2383.301mil|Location2.X=2394.551mil|Location1.Y=3846.682mil|Location2.Y=3857.932mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (9.644mil &lt; 10mil) Between Pad R1-1(2390mil,3820mil) on Multi-Layer And Track (2390mil,3861mil)(2390mil,3870mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [9.644mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Y410P\Desktop\VFD Clock\Altium\VFD_Clock\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2383.301mil|Location2.X=2394.551mil|Location1.Y=4082.068mil|Location2.Y=4093.318mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Y410P\Desktop\VFD Clock\Altium\VFD_Clock\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2383.301mil|Location2.X=2394.551mil|Location1.Y=4082.068mil|Location2.Y=4093.318mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (9.644mil &lt; 10mil) Between Pad R1-2(2390mil,4120mil) on Multi-Layer And Track (2390mil,4070mil)(2390mil,4079mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [9.644mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Y410P\Desktop\VFD Clock\Altium\VFD_Clock\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2056.466mil|Location2.X=2067.716mil|Location1.Y=3724.375mil|Location2.Y=3735.625mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Y410P\Desktop\VFD Clock\Altium\VFD_Clock\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2056.466mil|Location2.X=2067.716mil|Location1.Y=3724.375mil|Location2.Y=3735.625mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (9.943mil &lt; 10mil) Between Pad R2-1(2030mil,3730mil) on Multi-Layer And Track (2071mil,3730mil)(2080mil,3730mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [9.943mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Y410P\Desktop\VFD Clock\Altium\VFD_Clock\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2292.101mil|Location2.X=2303.351mil|Location1.Y=3724.111mil|Location2.Y=3735.361mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Y410P\Desktop\VFD Clock\Altium\VFD_Clock\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2292.101mil|Location2.X=2303.351mil|Location1.Y=3724.111mil|Location2.Y=3735.361mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (9.586mil &lt; 10mil) Between Pad R2-2(2330mil,3730mil) on Multi-Layer And Track (2280mil,3730mil)(2289mil,3730mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [9.586mil]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>

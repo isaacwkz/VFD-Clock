@@ -1,0 +1,30 @@
+PCAD Importer Log
+Project : DC-005.LibPkg
+
+Section : C:\Users\Y410P\Desktop\VFD Clock\Altium\VFD_Clock\DC-005.lia
+    Section : PCB Library - DC-005.PcbLib
+        Section : Load Messages
+            Warning - 1 : Skipping Token DC-005 On Line 147
+            Warning - 1 : Skipping Token attachedSymbol On Line 229
+        EndSection
+
+        Section : Import Messages
+        EndSection
+    EndSection
+
+    Section : SCH Library - DC-005.SchLib
+        Section : Parsing Messages
+            Warning - 1 : Skipping Token padStyleDef On Line 9
+            Warning - 1 : Skipping Token padStyleDef On Line 21
+            Warning - 1 : Skipping Token multiLayer On Line 96
+            Warning - 1 : Skipping Token layerContents On Line 101
+            Warning - 1 : Skipping Token layerContents On Line 109
+            Warning - 1 : Skipping Token layerContents On Line 123
+            Warning - 1 : Skipping Token layerContents On Line 131
+            Warning - 1 : Skipping Token layerContents On Line 137
+        EndSection
+
+        Section : Generating SCH Library - DC-005.SchLib
+        EndSection
+    EndSection
+EndSection

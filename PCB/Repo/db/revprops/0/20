@@ -1,0 +1,13 @@
+K 10
+svn:author
+V 8
+P1405354
+K 8
+svn:date
+V 27
+2018-12-13T08:46:05.161277Z
+K 7
+svn:log
+V 31
+Changed ESP8266 ADC0 pin to I/O
+END

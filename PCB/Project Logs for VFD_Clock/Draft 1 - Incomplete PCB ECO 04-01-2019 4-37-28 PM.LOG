@@ -1,0 +1,4 @@
+Removed Pin From Net: NetName=+5 Pin=C21-1
+Removed Pin From Net: NetName=GND Pin=C21-2
+Removed Member From Class: ClassName=VFD Clock Member=C21
+Added Room: Name=VFD Clock

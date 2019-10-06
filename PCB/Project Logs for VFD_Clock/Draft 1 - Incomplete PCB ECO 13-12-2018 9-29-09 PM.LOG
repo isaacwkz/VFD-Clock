@@ -1,0 +1,7 @@
+Removed Pin From Net: NetName=DS1-8 Pin=DS1-H
+Removed Pin From Net: NetName=DS2-8 Pin=DS2-H
+Removed Pin From Net: NetName=DS3-8 Pin=DS3-H
+Removed Pin From Net: NetName=DS4-8 Pin=DS4-H
+Removed Pin From Net: NetName=DS5-8 Pin=DS5-H
+Removed Pin From Net: NetName=DS6-8 Pin=DS6-H
+Added Room: Name=VFD Clock

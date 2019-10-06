@@ -1,0 +1,356 @@
+Added Component: Designator=IC1(SOP18 (WM))
+Add component. Clean all parameters for all variants
+Added Component: Designator=IC2(SOP18 (WM))
+Add component. Clean all parameters for all variants
+Added Component: Designator=IC3(SOP18 (WM))
+Add component. Clean all parameters for all variants
+Added Component: Designator=IC4(SOP18 (WM))
+Add component. Clean all parameters for all variants
+Added Component: Designator=IC5(SOP18 (WM))
+Add component. Clean all parameters for all variants
+Added Component: Designator=IC6(SOP18 (WM))
+Add component. Clean all parameters for all variants
+Added Component: Designator=IC7(SO16)
+Add component. Clean all parameters for all variants
+Added Component: Designator=IC8(SO16)
+Add component. Clean all parameters for all variants
+Added Component: Designator=IC9(SO16)
+Add component. Clean all parameters for all variants
+Added Component: Designator=IC10(SO16)
+Add component. Clean all parameters for all variants
+Added Component: Designator=IC11(SO16)
+Add component. Clean all parameters for all variants
+Added Component: Designator=IC12(SO16)
+Add component. Clean all parameters for all variants
+Added Component: Designator=IC13(ESP8266)
+Add component. Clean all parameters for all variants
+Added Component: Designator=IC14(SOT23-6L)
+Add component. Clean all parameters for all variants
+Added Component: Designator=IC15(SOT23-6L)
+Add component. Clean all parameters for all variants
+Added Component: Designator=IC16(SOT23-6L)
+Add component. Clean all parameters for all variants
+Added Component: Designator=IC17(SOT23-6L)
+Add component. Clean all parameters for all variants
+Added Component: Designator=IC18(SOP18 (WM))
+Add component. Clean all parameters for all variants
+Added Component: Designator=LED1(5050)
+Add component. Clean all parameters for all variants
+Added Component: Designator=LED2(5050)
+Add component. Clean all parameters for all variants
+Added Component: Designator=LED3(5050)
+Add component. Clean all parameters for all variants
+Added Component: Designator=LED4(5050)
+Add component. Clean all parameters for all variants
+Added Component: Designator=LED5(5050)
+Add component. Clean all parameters for all variants
+Added Component: Designator=LED6(5050)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=Q12-1 Pin=IC1-1
+Added Pin To Net: NetName=Q12-2 Pin=IC1-2
+Added Pin To Net: NetName=Q12-3 Pin=IC1-3
+Added Pin To Net: NetName=Q12-4 Pin=IC1-4
+Added Pin To Net: NetName=Q12-5 Pin=IC1-5
+Added Pin To Net: NetName=Q12-6 Pin=IC1-6
+Added Pin To Net: NetName=Q12-7 Pin=IC1-7
+Added Pin To Net: NetName=Q12-8 Pin=IC1-8
+Added Pin To Net: NetName=+27 Pin=IC1-9
+Added Pin To Net: NetName=GND Pin=IC1-10
+Added Pin To Net: NetName=DS1-8 Pin=IC1-11
+Added Pin To Net: NetName=DS1-7 Pin=IC1-12
+Added Pin To Net: NetName=DS1-6 Pin=IC1-13
+Added Pin To Net: NetName=DS1-5 Pin=IC1-14
+Added Pin To Net: NetName=DS1-4 Pin=IC1-15
+Added Pin To Net: NetName=DS1-3 Pin=IC1-16
+Added Pin To Net: NetName=DS1-2 Pin=IC1-17
+Added Pin To Net: NetName=DS1-1 Pin=IC1-18
+Added Pin To Net: NetName=Q11-1 Pin=IC2-1
+Added Pin To Net: NetName=Q11-2 Pin=IC2-2
+Added Pin To Net: NetName=Q11-3 Pin=IC2-3
+Added Pin To Net: NetName=Q11-4 Pin=IC2-4
+Added Pin To Net: NetName=Q11-5 Pin=IC2-5
+Added Pin To Net: NetName=Q11-6 Pin=IC2-6
+Added Pin To Net: NetName=Q11-7 Pin=IC2-7
+Added Pin To Net: NetName=Q11-8 Pin=IC2-8
+Added Pin To Net: NetName=+27 Pin=IC2-9
+Added Pin To Net: NetName=GND Pin=IC2-10
+Added Pin To Net: NetName=DS2-8 Pin=IC2-11
+Added Pin To Net: NetName=DS2-7 Pin=IC2-12
+Added Pin To Net: NetName=DS2-6 Pin=IC2-13
+Added Pin To Net: NetName=DS2-5 Pin=IC2-14
+Added Pin To Net: NetName=DS2-4 Pin=IC2-15
+Added Pin To Net: NetName=DS2-3 Pin=IC2-16
+Added Pin To Net: NetName=DS2-2 Pin=IC2-17
+Added Pin To Net: NetName=DS2-1 Pin=IC2-18
+Added Pin To Net: NetName=Q10-1 Pin=IC3-1
+Added Pin To Net: NetName=Q10-2 Pin=IC3-2
+Added Pin To Net: NetName=Q10-3 Pin=IC3-3
+Added Pin To Net: NetName=Q10-4 Pin=IC3-4
+Added Pin To Net: NetName=Q10-5 Pin=IC3-5
+Added Pin To Net: NetName=Q10-6 Pin=IC3-6
+Added Pin To Net: NetName=Q10-7 Pin=IC3-7
+Added Pin To Net: NetName=Q10-8 Pin=IC3-8
+Added Pin To Net: NetName=+27 Pin=IC3-9
+Added Pin To Net: NetName=GND Pin=IC3-10
+Added Pin To Net: NetName=DS3-8 Pin=IC3-11
+Added Pin To Net: NetName=DS3-7 Pin=IC3-12
+Added Pin To Net: NetName=DS3-6 Pin=IC3-13
+Added Pin To Net: NetName=DS3-5 Pin=IC3-14
+Added Pin To Net: NetName=DS3-4 Pin=IC3-15
+Added Pin To Net: NetName=DS3-3 Pin=IC3-16
+Added Pin To Net: NetName=DS3-2 Pin=IC3-17
+Added Pin To Net: NetName=DS3-1 Pin=IC3-18
+Added Pin To Net: NetName=Q9-1 Pin=IC4-1
+Added Pin To Net: NetName=Q9-2 Pin=IC4-2
+Added Pin To Net: NetName=Q9-3 Pin=IC4-3
+Added Pin To Net: NetName=Q9-4 Pin=IC4-4
+Added Pin To Net: NetName=Q9-5 Pin=IC4-5
+Added Pin To Net: NetName=Q9-6 Pin=IC4-6
+Added Pin To Net: NetName=Q9-7 Pin=IC4-7
+Added Pin To Net: NetName=Q9-8 Pin=IC4-8
+Added Pin To Net: NetName=+27 Pin=IC4-9
+Added Pin To Net: NetName=GND Pin=IC4-10
+Added Pin To Net: NetName=DS4-8 Pin=IC4-11
+Added Pin To Net: NetName=DS4-7 Pin=IC4-12
+Added Pin To Net: NetName=DS4-6 Pin=IC4-13
+Added Pin To Net: NetName=DS4-5 Pin=IC4-14
+Added Pin To Net: NetName=DS4-4 Pin=IC4-15
+Added Pin To Net: NetName=DS4-3 Pin=IC4-16
+Added Pin To Net: NetName=DS4-2 Pin=IC4-17
+Added Pin To Net: NetName=DS4-1 Pin=IC4-18
+Added Pin To Net: NetName=Q8-1 Pin=IC5-1
+Added Pin To Net: NetName=Q8-2 Pin=IC5-2
+Added Pin To Net: NetName=Q8-3 Pin=IC5-3
+Added Pin To Net: NetName=Q8-4 Pin=IC5-4
+Added Pin To Net: NetName=Q8-5 Pin=IC5-5
+Added Pin To Net: NetName=Q8-6 Pin=IC5-6
+Added Pin To Net: NetName=Q8-7 Pin=IC5-7
+Added Pin To Net: NetName=Q8-8 Pin=IC5-8
+Added Pin To Net: NetName=+27 Pin=IC5-9
+Added Pin To Net: NetName=GND Pin=IC5-10
+Added Pin To Net: NetName=DS5-8 Pin=IC5-11
+Added Pin To Net: NetName=DS5-7 Pin=IC5-12
+Added Pin To Net: NetName=DS5-6 Pin=IC5-13
+Added Pin To Net: NetName=DS5-5 Pin=IC5-14
+Added Pin To Net: NetName=DS5-4 Pin=IC5-15
+Added Pin To Net: NetName=DS5-3 Pin=IC5-16
+Added Pin To Net: NetName=DS5-2 Pin=IC5-17
+Added Pin To Net: NetName=DS5-1 Pin=IC5-18
+Added Pin To Net: NetName=Q7-1 Pin=IC6-1
+Added Pin To Net: NetName=Q7-2 Pin=IC6-2
+Added Pin To Net: NetName=Q7-3 Pin=IC6-3
+Added Pin To Net: NetName=Q7-4 Pin=IC6-4
+Added Pin To Net: NetName=Q7-5 Pin=IC6-5
+Added Pin To Net: NetName=Q7-6 Pin=IC6-6
+Added Pin To Net: NetName=Q7-7 Pin=IC6-7
+Added Pin To Net: NetName=Q7-8 Pin=IC6-8
+Added Pin To Net: NetName=+27 Pin=IC6-9
+Added Pin To Net: NetName=GND Pin=IC6-10
+Added Pin To Net: NetName=DS6-8 Pin=IC6-11
+Added Pin To Net: NetName=DS6-7 Pin=IC6-12
+Added Pin To Net: NetName=DS6-6 Pin=IC6-13
+Added Pin To Net: NetName=DS6-5 Pin=IC6-14
+Added Pin To Net: NetName=DS6-4 Pin=IC6-15
+Added Pin To Net: NetName=DS6-3 Pin=IC6-16
+Added Pin To Net: NetName=DS6-2 Pin=IC6-17
+Added Pin To Net: NetName=DS6-1 Pin=IC6-18
+Added Pin To Net: NetName=Q7-7 Pin=IC7-1
+Added Pin To Net: NetName=Q7-6 Pin=IC7-2
+Added Pin To Net: NetName=Q7-5 Pin=IC7-3
+Added Pin To Net: NetName=Q7-4 Pin=IC7-4
+Added Pin To Net: NetName=Q7-3 Pin=IC7-5
+Added Pin To Net: NetName=Q7-2 Pin=IC7-6
+Added Pin To Net: NetName=Q7-1 Pin=IC7-7
+Added Pin To Net: NetName=GND Pin=IC7-8
+Added Pin To Net: NetName=NetIC7_9 Pin=IC7-9
+Added Pin To Net: NetName=+5 Pin=IC7-10
+Added Pin To Net: NetName=NetIC7_11 Pin=IC7-11
+Added Pin To Net: NetName=NetIC7_12 Pin=IC7-12
+Added Pin To Net: NetName=GND Pin=IC7-13
+Added Pin To Net: NetName=NetIC7_14 Pin=IC7-14
+Added Pin To Net: NetName=Q7-8 Pin=IC7-15
+Added Pin To Net: NetName=+5 Pin=IC7-16
+Added Pin To Net: NetName=Q8-7 Pin=IC8-1
+Added Pin To Net: NetName=Q8-6 Pin=IC8-2
+Added Pin To Net: NetName=Q8-5 Pin=IC8-3
+Added Pin To Net: NetName=Q8-4 Pin=IC8-4
+Added Pin To Net: NetName=Q8-3 Pin=IC8-5
+Added Pin To Net: NetName=Q8-2 Pin=IC8-6
+Added Pin To Net: NetName=Q8-1 Pin=IC8-7
+Added Pin To Net: NetName=GND Pin=IC8-8
+Added Pin To Net: NetName=NetIC8_9 Pin=IC8-9
+Added Pin To Net: NetName=+5 Pin=IC8-10
+Added Pin To Net: NetName=NetIC7_11 Pin=IC8-11
+Added Pin To Net: NetName=NetIC7_12 Pin=IC8-12
+Added Pin To Net: NetName=GND Pin=IC8-13
+Added Pin To Net: NetName=NetIC7_9 Pin=IC8-14
+Added Pin To Net: NetName=Q8-8 Pin=IC8-15
+Added Pin To Net: NetName=+5 Pin=IC8-16
+Added Pin To Net: NetName=Q9-7 Pin=IC9-1
+Added Pin To Net: NetName=Q9-6 Pin=IC9-2
+Added Pin To Net: NetName=Q9-5 Pin=IC9-3
+Added Pin To Net: NetName=Q9-4 Pin=IC9-4
+Added Pin To Net: NetName=Q9-3 Pin=IC9-5
+Added Pin To Net: NetName=Q9-2 Pin=IC9-6
+Added Pin To Net: NetName=Q9-1 Pin=IC9-7
+Added Pin To Net: NetName=GND Pin=IC9-8
+Added Pin To Net: NetName=NetIC9_9 Pin=IC9-9
+Added Pin To Net: NetName=+5 Pin=IC9-10
+Added Pin To Net: NetName=NetIC7_11 Pin=IC9-11
+Added Pin To Net: NetName=NetIC7_12 Pin=IC9-12
+Added Pin To Net: NetName=GND Pin=IC9-13
+Added Pin To Net: NetName=NetIC8_9 Pin=IC9-14
+Added Pin To Net: NetName=Q9-8 Pin=IC9-15
+Added Pin To Net: NetName=+5 Pin=IC9-16
+Added Pin To Net: NetName=Q10-7 Pin=IC10-1
+Added Pin To Net: NetName=Q10-6 Pin=IC10-2
+Added Pin To Net: NetName=Q10-5 Pin=IC10-3
+Added Pin To Net: NetName=Q10-4 Pin=IC10-4
+Added Pin To Net: NetName=Q10-3 Pin=IC10-5
+Added Pin To Net: NetName=Q10-2 Pin=IC10-6
+Added Pin To Net: NetName=Q10-1 Pin=IC10-7
+Added Pin To Net: NetName=GND Pin=IC10-8
+Added Pin To Net: NetName=NetIC10_9 Pin=IC10-9
+Added Pin To Net: NetName=+5 Pin=IC10-10
+Added Pin To Net: NetName=NetIC7_11 Pin=IC10-11
+Added Pin To Net: NetName=NetIC7_12 Pin=IC10-12
+Added Pin To Net: NetName=GND Pin=IC10-13
+Added Pin To Net: NetName=NetIC9_9 Pin=IC10-14
+Added Pin To Net: NetName=Q10-8 Pin=IC10-15
+Added Pin To Net: NetName=+5 Pin=IC10-16
+Added Pin To Net: NetName=Q11-7 Pin=IC11-1
+Added Pin To Net: NetName=Q11-6 Pin=IC11-2
+Added Pin To Net: NetName=Q11-5 Pin=IC11-3
+Added Pin To Net: NetName=Q11-4 Pin=IC11-4
+Added Pin To Net: NetName=Q11-3 Pin=IC11-5
+Added Pin To Net: NetName=Q11-2 Pin=IC11-6
+Added Pin To Net: NetName=Q11-1 Pin=IC11-7
+Added Pin To Net: NetName=GND Pin=IC11-8
+Added Pin To Net: NetName=NetIC11_9 Pin=IC11-9
+Added Pin To Net: NetName=+5 Pin=IC11-10
+Added Pin To Net: NetName=NetIC7_11 Pin=IC11-11
+Added Pin To Net: NetName=NetIC7_12 Pin=IC11-12
+Added Pin To Net: NetName=GND Pin=IC11-13
+Added Pin To Net: NetName=NetIC10_9 Pin=IC11-14
+Added Pin To Net: NetName=Q11-8 Pin=IC11-15
+Added Pin To Net: NetName=+5 Pin=IC11-16
+Added Pin To Net: NetName=Q12-7 Pin=IC12-1
+Added Pin To Net: NetName=Q12-6 Pin=IC12-2
+Added Pin To Net: NetName=Q12-5 Pin=IC12-3
+Added Pin To Net: NetName=Q12-4 Pin=IC12-4
+Added Pin To Net: NetName=Q12-3 Pin=IC12-5
+Added Pin To Net: NetName=Q12-2 Pin=IC12-6
+Added Pin To Net: NetName=Q12-1 Pin=IC12-7
+Added Pin To Net: NetName=GND Pin=IC12-8
+Added Pin To Net: NetName=+5 Pin=IC12-10
+Added Pin To Net: NetName=NetIC7_11 Pin=IC12-11
+Added Pin To Net: NetName=NetIC7_12 Pin=IC12-12
+Added Pin To Net: NetName=GND Pin=IC12-13
+Added Pin To Net: NetName=NetIC11_9 Pin=IC12-14
+Added Pin To Net: NetName=Q12-8 Pin=IC12-15
+Added Pin To Net: NetName=+5 Pin=IC12-16
+Added Pin To Net: NetName=GND Pin=IC13-10
+Added Pin To Net: NetName=+3.3 Pin=IC13-11
+Added Pin To Net: NetName=+5 Pin=IC13-15
+Added Pin To Net: NetName=NetIC13_21 Pin=IC13-21
+Added Pin To Net: NetName=NetIC13_23 Pin=IC13-23
+Added Pin To Net: NetName=NetIC13_21 Pin=IC14-1
+Added Pin To Net: NetName=GND Pin=IC14-2
+Added Pin To Net: NetName=+3.3 Pin=IC14-3
+Added Pin To Net: NetName=+5 Pin=IC14-4
+Added Pin To Net: NetName=NetIC7_14 Pin=IC14-5
+Added Pin To Net: NetName=+3.3 Pin=IC14-6
+Added Pin To Net: NetName=NetIC13_23 Pin=IC15-1
+Added Pin To Net: NetName=GND Pin=IC15-2
+Added Pin To Net: NetName=+3.3 Pin=IC15-3
+Added Pin To Net: NetName=+5 Pin=IC15-4
+Added Pin To Net: NetName=NetIC7_11 Pin=IC15-5
+Added Pin To Net: NetName=+3.3 Pin=IC15-6
+Added Pin To Net: NetName=GND Pin=IC16-2
+Added Pin To Net: NetName=+3.3 Pin=IC16-3
+Added Pin To Net: NetName=+5 Pin=IC16-4
+Added Pin To Net: NetName=NetIC7_12 Pin=IC16-5
+Added Pin To Net: NetName=+3.3 Pin=IC16-6
+Added Pin To Net: NetName=GND Pin=IC17-2
+Added Pin To Net: NetName=+3.3 Pin=IC17-3
+Added Pin To Net: NetName=+5 Pin=IC17-4
+Added Pin To Net: NetName=+3.3 Pin=IC17-6
+Added Pin To Net: NetName=GND Pin=IC18-7
+Added Pin To Net: NetName=GND Pin=IC18-8
+Added Pin To Net: NetName=+27 Pin=IC18-9
+Added Pin To Net: NetName=GND Pin=IC18-10
+Added Pin To Net: NetName=NetDS6_Grid Pin=IC18-13
+Added Pin To Net: NetName=NetDS5_Grid Pin=IC18-14
+Added Pin To Net: NetName=NetDS4_Grid Pin=IC18-15
+Added Pin To Net: NetName=NetDS3_Grid Pin=IC18-16
+Added Pin To Net: NetName=NetDS2_Grid Pin=IC18-17
+Added Pin To Net: NetName=NetDS1_Grid Pin=IC18-18
+Added Pin To Net: NetName=+5 Pin=LED1-2
+Added Pin To Net: NetName=GND Pin=LED1-5
+Added Pin To Net: NetName=+5 Pin=LED2-2
+Added Pin To Net: NetName=GND Pin=LED2-5
+Added Pin To Net: NetName=+5 Pin=LED3-2
+Added Pin To Net: NetName=GND Pin=LED3-5
+Added Pin To Net: NetName=+5 Pin=LED4-2
+Added Pin To Net: NetName=GND Pin=LED4-5
+Added Pin To Net: NetName=+5 Pin=LED5-2
+Added Pin To Net: NetName=GND Pin=LED5-5
+Added Pin To Net: NetName=+5 Pin=LED6-2
+Added Pin To Net: NetName=GND Pin=LED6-5
+Added Pin To Net: NetName=NetIC13_20 Pin=IC13-20
+Added Pin To Net: NetName=NetIC13_20 Pin=IC16-1
+Added Net: Name=NetIC13_20
+Added Pin To Net: NetName=NetIC13_27 Pin=IC13-27
+Added Pin To Net: NetName=NetIC13_27 Pin=IC17-1
+Added Net: Name=NetIC13_27
+Added Pin To Net: NetName=NetIC13_28 Pin=IC13-28
+Added Pin To Net: NetName=NetIC13_28 Pin=IC18-1
+Added Pin To Net: NetName=NetIC13_28 Pin=IC18-2
+Added Pin To Net: NetName=NetIC13_28 Pin=IC18-3
+Added Pin To Net: NetName=NetIC13_28 Pin=IC18-4
+Added Pin To Net: NetName=NetIC13_28 Pin=IC18-5
+Added Pin To Net: NetName=NetIC13_28 Pin=IC18-6
+Added Net: Name=NetIC13_28
+Added Pin To Net: NetName=NetIC17_5 Pin=IC17-5
+Added Pin To Net: NetName=NetIC17_5 Pin=LED1-4
+Added Net: Name=NetIC17_5
+Added Pin To Net: NetName=NetLED1_3 Pin=LED1-3
+Added Pin To Net: NetName=NetLED1_3 Pin=LED2-4
+Added Net: Name=NetLED1_3
+Added Pin To Net: NetName=NetLED2_3 Pin=LED2-3
+Added Pin To Net: NetName=NetLED2_3 Pin=LED3-4
+Added Net: Name=NetLED2_3
+Added Pin To Net: NetName=NetLED3_3 Pin=LED3-3
+Added Pin To Net: NetName=NetLED3_3 Pin=LED4-4
+Added Net: Name=NetLED3_3
+Added Pin To Net: NetName=NetLED4_3 Pin=LED4-3
+Added Pin To Net: NetName=NetLED4_3 Pin=LED5-4
+Added Net: Name=NetLED4_3
+Added Pin To Net: NetName=NetLED5_3 Pin=LED5-3
+Added Pin To Net: NetName=NetLED5_3 Pin=LED6-4
+Added Net: Name=NetLED5_3
+Added Member To Class: ClassName=VFD Clock Member=Component IC1 MIC2981BWM
+Added Member To Class: ClassName=VFD Clock Member=Component IC2 MIC2981BWM
+Added Member To Class: ClassName=VFD Clock Member=Component IC3 MIC2981BWM
+Added Member To Class: ClassName=VFD Clock Member=Component IC4 MIC2981BWM
+Added Member To Class: ClassName=VFD Clock Member=Component IC5 MIC2981BWM
+Added Member To Class: ClassName=VFD Clock Member=Component IC6 MIC2981BWM
+Added Member To Class: ClassName=VFD Clock Member=Component IC7 74HC595D
+Added Member To Class: ClassName=VFD Clock Member=Component IC8 74HC595D
+Added Member To Class: ClassName=VFD Clock Member=Component IC9 74HC595D
+Added Member To Class: ClassName=VFD Clock Member=Component IC10 74HC595D
+Added Member To Class: ClassName=VFD Clock Member=Component IC11 74HC595D
+Added Member To Class: ClassName=VFD Clock Member=Component IC12 74HC595D
+Added Member To Class: ClassName=VFD Clock Member=Component IC13 ESP8266
+Added Member To Class: ClassName=VFD Clock Member=Component IC14 PI4ULS5V201
+Added Member To Class: ClassName=VFD Clock Member=Component IC15 PI4ULS5V201
+Added Member To Class: ClassName=VFD Clock Member=Component IC16 PI4ULS5V201
+Added Member To Class: ClassName=VFD Clock Member=Component IC17 PI4ULS5V201
+Added Member To Class: ClassName=VFD Clock Member=Component IC18 MIC2981BWM
+Added Member To Class: ClassName=VFD Clock Member=Component LED1 WS2813B
+Added Member To Class: ClassName=VFD Clock Member=Component LED2 WS2813B
+Added Member To Class: ClassName=VFD Clock Member=Component LED3 WS2813B
+Added Member To Class: ClassName=VFD Clock Member=Component LED4 WS2813B
+Added Member To Class: ClassName=VFD Clock Member=Component LED5 WS2813B
+Added Member To Class: ClassName=VFD Clock Member=Component LED6 WS2813B
+Added Room: Name=VFD Clock

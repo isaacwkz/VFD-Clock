@@ -1,0 +1,6 @@
+Remove Pin=DS1-DP From Net=DS1-8
+Remove Pin=DS2-DP From Net=DS2-8
+Remove Pin=DS3-DP From Net=DS3-8
+Remove Pin=DS4-DP From Net=DS4-8
+Remove Pin=DS5-DP From Net=DS5-8
+Remove Pin=DS6-DP From Net=DS6-8
